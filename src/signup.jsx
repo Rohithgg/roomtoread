@@ -1,7 +1,9 @@
 "use client"
 
 import { useState } from "react"
-
+import Button from "@mui/material/Button"
+import Input from "@mui/material/Input"
+import Label from "@mui/material/InputLabel"
 import Layout from "./layouts.jsx"
 
 const SignUp = () => {

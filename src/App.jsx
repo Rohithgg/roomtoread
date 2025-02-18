@@ -1,7 +1,8 @@
 import {} from "react"
-import { BrowserRouter as Router, Route, Switch } from "react-router-dom"
+import { BrowserRouter as Router, Route } from "react-router-dom"
 import Login from "./login.jsx"
 import SignUp from "./signup.jsx"
+import {Switch} from "@mui/material";
 
 function App() {
     return (

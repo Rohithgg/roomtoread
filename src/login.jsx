@@ -1,28 +1,26 @@
 "use client"
-
-import { React } from "react"
+import React from "react"
 import { useState } from "react"
-import { Button } from "@/components/ui/button"
-import { Input } from "@/components/ui/input"
-import { Label } from "@/components/ui/label"
-import "./layouts.jsx"
-import Layout from "./layouts.jsx";
+import Button from "@mui/material/Button"
+import Input from "@mui/material/Input"
+import InputLabel from "@mui/material/InputLabel"
+import Layout from "./layouts.jsx"
 
 const Login = () => {
     const [email, setEmail] = useState("")
     const [password, setPassword] = useState("")
 
-    const handleSubmit = (e = React.FormEvent) => {
+    const handleSubmit = (e) => {
         e.preventDefault()
         // Here you would typically handle the login logic
-        console.log("Login attempt", { email, password })
+        console.log("Check in attempt", { email, password })
     }
 
     return (
         <Layout>
             <form onSubmit={handleSubmit} className="space-y-6">
                 <div>
-                    <Label htmlFor="email">Email address</Label>
+                    <InputLabel htmlFor="email">Email address</InputLabel>
                     <Input
                         id="email"
                         name="email"
@@ -36,7 +34,7 @@ const Login = () => {
                 </div>
 
                 <div>
-                    <Label htmlFor="password">Password</Label>
+                    <InputLabel htmlFor="password">Password</InputLabel>
                     <Input
                         id="password"
                         name="password"
@@ -106,6 +104,4 @@ const Login = () => {
         </Layout>
     )
 }
-
 export default Login
-
